@@ -1,0 +1,15 @@
+{
+  "name": "shivam-jha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shivam Jha - Full Stack Web Developer Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

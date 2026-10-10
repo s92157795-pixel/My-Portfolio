@@ -1271,6 +1271,10 @@ section {
   flex-direction: column;
 }
 
+.contact-section-tag {
+  align-self: flex-start;
+}
+
 .contact-info-title {
   font-size: 1.85rem;
   margin-bottom: 1rem;
@@ -1377,6 +1381,11 @@ section {
 .form-textarea {
   min-height: 140px;
   resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
 }
 
 /* Toast Notification */
@@ -1519,89 +1528,438 @@ section {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints & Mobile Optimization
+   Responsive Breakpoints & Mobile/Tablet Optimization
    ========================================================================== */
+
+/* --- Tablet & Medium Screens (max-width: 1024px) --- */
 @media (max-width: 1024px) {
+  section {
+    padding: 5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.75rem;
+  }
+
+  /* Hero Section Centering */
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
+    justify-items: center;
   }
   
   .hero-content {
     align-items: center;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .hero-description {
+  .hero-status-pill {
+    align-self: center;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .hero-role-wrapper {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-title {
+    text-align: center;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+  }
+
+  .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
   .hero-cta-group {
     justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-highlights {
     justify-content: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-stat-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-visual-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 520px;
+  }
+
+  .code-window-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Constrain floating badges on tablet to avoid overflow */
+  .floating-badge-1 {
+    right: 5px;
+    top: -12px;
+  }
+
+  .floating-badge-2 {
+    left: 5px;
+    bottom: -12px;
+  }
+
+  /* About Me & Bento Information Boxes Centering */
+  .about-intro-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .about-badge-header {
+    text-align: center;
+  }
+
+  .about-narrative {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 760px;
   }
 
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
 
+  .bento-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .bento-icon-wrapper {
+    margin: 0 auto 1.25rem;
+  }
+
+  .bento-title,
+  .bento-value {
+    text-align: center;
+  }
+
+  .bento-desc {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  /* Skills Categories Centering */
   .skills-categories {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.75rem;
+    max-width: 620px;
+    margin: 0 auto;
   }
 
+  .skill-category-card {
+    align-items: center;
+    text-align: center;
+    padding: 2.25rem 2rem;
+  }
+
+  .skill-category-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .category-icon-box {
+    margin: 0 auto;
+  }
+
+  .category-title,
+  .category-subtitle {
+    text-align: center;
+  }
+
+  .skills-list {
+    width: 100%;
+  }
+
+  .skill-item {
+    width: 100%;
+  }
+
+  /* Featured Project Centering */
   .featured-project-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    padding: 2.25rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
   }
 
+  .project-mockup-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .project-details {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .project-badge-tag {
+    align-self: center;
+    margin: 0 auto 0.85rem;
+  }
+
+  .project-name {
+    text-align: center;
+  }
+
+  .project-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 580px;
+  }
+
+  .project-features-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 1.25rem;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 2rem;
+  }
+
+  .project-feature-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .tech-tags {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+  }
+
+  .project-actions {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Services Grid Centering */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
+  .service-card {
+    align-items: center;
+    text-align: center;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .service-icon-box {
+    margin: 0 auto 1.25rem;
+  }
+
+  .service-title {
+    text-align: center;
+  }
+
+  .service-desc {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 340px;
+  }
+
+  /* Approach Steps Centering */
   .approach-steps-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
+  .approach-step-card {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.75rem;
+  }
+
+  .step-number {
+    margin: 0 auto 0.75rem;
+    text-align: center;
+  }
+
+  .step-title {
+    text-align: center;
+  }
+
+  .step-desc {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 340px;
+  }
+
+  /* AI Workflow Card Centering */
+  .ai-workflow-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 680px;
+    margin: 2rem auto 0;
+  }
+
+  .ai-card-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .ai-card-content {
+    text-align: center;
+  }
+
+  .ai-card-content h4,
+  .ai-card-content p {
+    text-align: center;
+  }
+
+  /* Contact Section Centering */
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem;
+    gap: 2.75rem;
+    padding: 2.75rem 2rem;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .contact-info-col {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-section-tag {
+    align-self: center !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .contact-info-title {
+    text-align: center;
+  }
+
+  .contact-info-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+  }
+
+  .social-links-list {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
+/* --- Mobile Breakpoint (max-width: 768px) --- */
 @media (max-width: 768px) {
   section {
-    padding: 4.5rem 0;
+    padding: 4rem 0;
   }
 
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 5.5vw, 2.35rem);
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Mobile Navigation Drawer */
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
+    width: 82%;
     max-width: 320px;
     height: 100vh;
     background: rgba(13, 16, 23, 0.98);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
     border-left: 1px solid var(--border-subtle);
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1.75rem;
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
     transition: right var(--transition-normal);
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 45px rgba(0, 0, 0, 0.85);
     z-index: 1000;
   }
 
   .nav-links.open {
     right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-cta-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .nav-toggle {
@@ -1611,8 +1969,9 @@ section {
   .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 999;
     opacity: 0;
     pointer-events: none;
@@ -1624,76 +1983,385 @@ section {
     pointer-events: auto;
   }
 
+  /* Hide floating badges on smaller mobile screens to prevent overflow and overlapping */
+  .floating-badge {
+    display: none;
+  }
+
+  /* Single column centered Bento information boxes */
   .bento-grid {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.25rem;
   }
 
+  /* Single column centered Services */
   .services-grid {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.25rem;
   }
 
+  /* Single column centered Approach steps */
   .approach-steps-container {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.25rem;
   }
 
+  /* Single column centered Project features */
   .project-features-list {
     grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .floating-badge {
-    display: none; /* Hide floating badges on narrow mobile to avoid overlap */
+  .project-feature-item {
+    justify-content: center;
   }
 
-  .ai-workflow-card {
-    flex-direction: column;
-    text-align: center;
+  /* Centered Footer */
+  .footer {
+    padding: 3.5rem 0 2rem;
   }
 
   .footer-top,
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .footer-brand {
+    text-align: center;
   }
 
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1.25rem;
   }
 }
 
+/* --- Compact Phones (max-width: 480px) --- */
 @media (max-width: 480px) {
+  .container {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  section {
+    padding: 3.25rem 0;
+  }
+
+  /* Hero Section Mobile Polish */
+  .hero {
+    padding-top: calc(var(--nav-height) + 1.25rem);
+    padding-bottom: 2.75rem;
+  }
+
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 0.92rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
   }
 
   .hero-cta-group {
     flex-direction: column;
     width: 100%;
+    max-width: 300px;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
   }
 
   .hero-cta-group .btn {
     width: 100%;
+    justify-content: center;
   }
 
   .hero-highlights {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.1rem;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.25rem;
+  }
+
+  .hero-stat-item {
     align-items: center;
   }
 
+  .hero-stat-value {
+    font-size: 1.25rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.78rem;
+  }
+
+  /* Code window compact styling */
+  .code-window-card {
+    border-radius: var(--radius-md);
+  }
+
+  .window-header {
+    padding: 0.65rem 1rem;
+  }
+
+  .window-body {
+    padding: 1rem 0.85rem;
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  /* About & Bento compact centering */
+  .about-intro-card {
+    padding: 1.75rem 1.2rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .about-badge-header {
+    font-size: 1.15rem;
+  }
+
+  .about-narrative {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .bento-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .bento-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .bento-title {
+    font-size: 1.05rem;
+  }
+
+  .bento-value {
+    font-size: 0.88rem;
+  }
+
+  .bento-desc {
+    font-size: 0.82rem;
+  }
+
+  /* Skills compact centering */
+  .skill-category-card {
+    padding: 1.75rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .category-icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .category-title {
+    font-size: 1.15rem;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.45rem;
+    padding: 0.85rem 0.75rem;
+  }
+
+  .skill-info-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .skill-badge {
+    font-size: 0.7rem;
+    margin-top: 0.15rem;
+  }
+
+  /* Featured Project compact centering */
   .featured-project-container {
-    padding: 1.5rem;
+    padding: 1.5rem 1.1rem;
+    border-radius: var(--radius-lg);
   }
 
+  .project-name {
+    font-size: 1.75rem;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+  }
+
+  .project-feature-item {
+    font-size: 0.82rem;
+  }
+
+  .tech-tags {
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .project-actions {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Services compact centering */
+  .service-card {
+    padding: 1.75rem 1.2rem;
+    border-radius: var(--radius-md);
+  }
+
+  .service-icon-box {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.86rem;
+  }
+
+  /* Approach compact centering */
+  .approach-step-card {
+    padding: 1.5rem 1.2rem;
+    border-radius: var(--radius-md);
+  }
+
+  .step-number {
+    font-size: 1.65rem;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+  }
+
+  .step-desc {
+    font-size: 0.84rem;
+  }
+
+  /* AI Workflow compact centering */
+  .ai-workflow-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--radius-md);
+  }
+
+  .ai-card-content h4 {
+    font-size: 1rem;
+  }
+
+  .ai-card-content p {
+    font-size: 0.85rem;
+  }
+
+  /* Contact compact centering */
   .contact-container {
-    padding: 1.5rem;
+    padding: 1.75rem 1.15rem;
+    border-radius: var(--radius-lg);
   }
 
+  .contact-info-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-info-text {
+    font-size: 0.92rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .social-item {
+    padding: 0.75rem 0.9rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .social-meta {
+    justify-content: center;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Floating WhatsApp Button compact placement */
   .whatsapp-float-btn {
-    bottom: 1.25rem;
-    left: 1.25rem;
+    bottom: 1.15rem;
+    left: 1.15rem;
     padding: 0.55rem 0.95rem;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    gap: 0.5rem;
+  }
+
+  .whatsapp-float-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* Toast Notification centered mobile */
+  .toast-notification {
+    bottom: 1.25rem;
+    right: 1rem;
+    left: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.85rem 1.25rem;
   }
 }
 
@@ -1706,3 +2374,4 @@ section {
     scroll-behavior: auto !important;
   }
 }
+

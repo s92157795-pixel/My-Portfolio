@@ -3,7 +3,7 @@
 A modern, highly interactive, and responsive portfolio website showcasing my projects, technical skill stack, and development workflows.
 
 ## 🚀 Live Demo
-- **Portfolio:** [Deploying to Vercel]
+- **Portfolio:** [https://my-portfolio-taupe-one-97tu7vvqo8.vercel.app/](https://my-portfolio-taupe-one-97tu7vvqo8.vercel.app/)
 - **Featured Project (Shiv Juice Center):** [https://shiv-juice.vercel.app/](https://shiv-juice.vercel.app/)
 
 ## 🛠️ Tech Stack
